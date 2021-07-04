@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { UserCardComponent } from './user/user-card/user-card.component';
-import { UserListComponent } from './user/user-list/user-list.component';
 import { UserModule } from './user/user.module';
 
 @NgModule({
@@ -12,7 +11,8 @@ import { UserModule } from './user/user.module';
   ],
   imports: [
     BrowserModule,
-    UserModule
+    UserModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
