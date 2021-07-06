@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-user-card',
@@ -7,8 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UserCardComponent implements OnInit {
 
-  @Input() name: string = ''
-  @Input() mail: string = ''
+  @Input() user: User = {name:'', mail:''}
 
   constructor() { }
 

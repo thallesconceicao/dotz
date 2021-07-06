@@ -1,26 +1,9 @@
 <div class="row">
-    <div class="col-12 col-md-3">
+    <div
+        *ngFor="let user of usersList" 
+        class="col-12 col-md-3">
         <app-user-card
-            name="Thalles"
-            mail="teste@gmail.com">
-        </app-user-card>
-    </div>
-    <div class="col-12 col-md-3">
-        <app-user-card
-            name="Pedro"
-            mail="pedro@gmail.com">
-        </app-user-card>
-    </div>
-    <div class="col-12 col-md-3">
-        <app-user-card
-            name="Pedra"
-            mail="pedra@gmail.com">
-        </app-user-card>
-    </div>
-    <div class="col-12 col-md-3">
-        <app-user-card
-            name="Cleber"
-            mail="cleber@gmail.com">
+            [user]="user">
         </app-user-card>
     </div>
 </div>
