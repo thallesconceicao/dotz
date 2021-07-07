@@ -3,18 +3,24 @@ import { CommonModule } from '@angular/common';
 import { UserCardComponent } from './components/user-card/user-card.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserService } from './services/user.service';
+import { UserFormComponent } from './components/user-form/user-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
     UserCardComponent,
-    UserListComponent
+    UserListComponent,
+    UserFormComponent
   ],
   exports: [
-    UserCardComponent,
-    UserListComponent
+    UserListComponent,
+    UserFormComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [
     UserService

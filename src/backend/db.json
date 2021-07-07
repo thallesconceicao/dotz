@@ -1,44 +1,50 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Caneta BIC preta",
-            "price": 1.20
-        },
-        {
-            "id": 2,
-            "name": "Notebook",
-            "price": 5100
-        },
-        {
-            "id": 3,
-            "name": "Teclado",
-            "price": 130
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "name": "Cleber",
-            "mail": "cleber@naoexiste.com",
-            "profession": "Arquiteto"
-        },
-        {
-            "id": 2,
-            "name": "Joana",
-            "mail": "joana@naoexiste.com",
-            "profession": "Designer"
-        },
-        {
-            "id": 3,
-            "name": "Pedro",
-            "mail": "pedro@naoexiste.com"
-        },
-        {
-            "id": 4,
-            "name": "Maria",
-            "mail": "maria@naoexiste.com",
-            "profession": "Jornalista"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC preta",
+      "price": 1.2
+    },
+    {
+      "id": 2,
+      "name": "Notebook",
+      "price": 5100
+    },
+    {
+      "id": 3,
+      "name": "Teclado",
+      "price": 130
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Cleber",
+      "mail": "cleber@naoexiste.com",
+      "profession": "Arquiteto"
+    },
+    {
+      "id": 2,
+      "name": "Joana",
+      "mail": "joana@naoexiste.com",
+      "profession": "Designer"
+    },
+    {
+      "id": 3,
+      "name": "Pedro",
+      "mail": "pedro@naoexiste.com"
+    },
+    {
+      "id": 4,
+      "name": "Maria",
+      "mail": "maria@naoexiste.com",
+      "profession": "Jornalista"
+    },
+    {
+      "name": "thalles",
+      "mail": "thallesangelo@gmail.com",
+      "profession": "analista de sistemas",
+      "id": 5
+    }
+  ]
 }

@@ -14,8 +14,24 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(params: any): Observable<User[]> {
+ 	getAll(params: any): Observable<User[]> {
 		return this.http.get<User[]>(`${this.api}/users`, { params })
+	}
+
+	getById(id: number): Observable<User> {
+		return this.http.get<User>(`${this.api}/users/${id}`)
+	}
+
+	save(user: User): Observable<User> {
+		return this.http.post<User>(`${this.api}/users`, user)
+	}
+
+	update(id: number, user: User): Observable<User> {
+		return this.http.put<User>(`${this.api}/users/${id}`, user)
+	}
+
+	delete(id: number): Observable<User> {
+		return this.http.delete<User>(`${this.api}/users/${id}`)
 	}
 
 }
