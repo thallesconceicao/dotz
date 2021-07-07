@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
 
@@ -13,7 +14,8 @@ export class UserFormComponent implements OnInit {
   userForm: FormGroup
 
   constructor(private formBuilder: FormBuilder,
-              private userService: UserService) { 
+              private userService: UserService,
+              private router: Router) { 
     this.userForm = this.buildForm()
   }
 
@@ -42,6 +44,7 @@ export class UserFormComponent implements OnInit {
     
     this.userService.save(user).subscribe(res => {
       alert("cadastrado com sucesso")
+      this.router.navigate(['/users'])
     }, error => {
       alert(error.message)
     })
