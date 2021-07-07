@@ -9,11 +9,15 @@ Navigate to the project folder
 
 Run `npm install` to install dependencies
 
+Run `npm install -g @angular/cli` to install the angular-cli globally if you don't have it yet
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 Open a new cmd/bash window for the backend
 
 Navigate to dotz/src/backend
+
+Run `npm install -g json-server` to install json-server globally if you don't have it yet
 
 Run `npm install` to install dependencies
 
@@ -29,11 +33,15 @@ Navegue até a página do projeto
 
 Execute `npm install` para instalar as dependências
 
+Execute `npm install -g @angular/cli` para instalar a cli do angular globalmente caso você não possua ela ainda
+
 Execute `ng serve` para iniciar o projeto. Navegue até `http://localhost:4200/`. O aplicativo vai recarregar automaticamente se você alterar algum dos arquivos.
 
 Abra um novo terminal para iniciar o backend da aplicação
 
 Navegue até dotz/src/backend
+
+Execute `npm install -g json-server` para instalar o json-server globalmente, caso ainda não possua
 
 Execute `npm install` para baixar as dependências do backend
 
