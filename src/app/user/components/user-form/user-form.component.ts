@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
 
@@ -15,7 +16,8 @@ export class UserFormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private userService: UserService,
-              private router: Router) { 
+              private router: Router,
+              private toastr: ToastrService) { 
     this.userForm = this.buildForm()
   }
 
@@ -32,7 +34,7 @@ export class UserFormComponent implements OnInit {
   onSubmit(){
 
     if(!this.userForm.valid){
-      alert("Verifique se todos os campos do formulário foram preenchidos corretamente")
+      this.toastr.error("Verifique se todos os campos do formulário foram preenchidos corretamente")
       return
     }
 
@@ -43,10 +45,10 @@ export class UserFormComponent implements OnInit {
     }
     
     this.userService.save(user).subscribe(res => {
-      alert("cadastrado com sucesso")
+      this.toastr.success("cadastrado com sucesso")
       this.router.navigate(['/users'])
     }, error => {
-      alert(error.message)
+      this.toastr.error(error.message)
     })
 
   }
