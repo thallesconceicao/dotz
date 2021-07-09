@@ -60,7 +60,7 @@ export class UserFormComponent implements OnInit {
     if(this.editMode){
       
       this.userService.update(this.id, user).subscribe(res => {
-        this.toastr.success("atualizado com sucesso")
+        this.toastr.success("Update Succesfully")
         this.router.navigate(['/users'])
       }, error => {
         this.toastr.error(error.message)
@@ -70,7 +70,7 @@ export class UserFormComponent implements OnInit {
     else{
 
       this.userService.save(user).subscribe(res => {
-        this.toastr.success("cadastrado com sucesso")
+        this.toastr.success("Registered successfully")
         this.router.navigate(['/users'])
       }, error => {
         this.toastr.error(error.message)
@@ -78,6 +78,19 @@ export class UserFormComponent implements OnInit {
 
     }
 
+  }
+
+  delete(){
+    if(this.editMode){
+      if(confirm('Are you sure you want to delete this user?')){
+        this.userService.delete(this.id).subscribe(res => {
+          this.toastr.success("Deleted with succes")
+          this.router.navigate(['/users'])
+        }, error => {
+          this.toastr.error(error.message)
+        })
+      }
+    }
   }
 
 }

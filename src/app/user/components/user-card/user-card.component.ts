@@ -12,10 +12,9 @@ export class UserCardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  getRouterLink = () : string => {
+  getRouterLink() : string{
     return '/user-form/' + this.user.id
   }
 
