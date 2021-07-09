@@ -1,7 +1,9 @@
-<div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-    <div class="card-header">{{user.name}}</div>
-    <div class="card-body">
-        <h5 class="card-title">{{user.mail}}</h5>
-        <p class="card-text">{{user.profession}}</p>
+<a [routerLink]="getRouterLink()">
+    <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">{{user.name}}</div>
+        <div class="card-body">
+            <h5 class="card-title">{{user.mail}}</h5>
+            <p class="card-text">{{user.profession}}</p>
+        </div>
     </div>
-</div>
+</a>

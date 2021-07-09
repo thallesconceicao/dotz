@@ -24,10 +24,10 @@
       "profession": "Arquiteto"
     },
     {
-      "id": 2,
-      "name": "Joana",
-      "mail": "joana@naoexiste.com",
-      "profession": "Designer"
+      "name": "Joana Silva",
+      "mail": "joana@testedeemail.com",
+      "profession": "Designer de interiores",
+      "id": 2
     },
     {
       "id": 3,
@@ -51,6 +51,12 @@
       "mail": "teste@teste.com",
       "profession": "testador",
       "id": 6
+    },
+    {
+      "name": "João Cardoso",
+      "mail": "jcardoso@hotnaomail.com",
+      "profession": "Biólogo Marinho",
+      "id": 7
     }
   ]
 }

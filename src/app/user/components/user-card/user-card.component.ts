@@ -4,7 +4,7 @@ import { User } from '../../models/user';
 @Component({
   selector: 'app-user-card',
   templateUrl: './user-card.component.html',
-  styleUrls: ['./user-card.component.css']
+  styleUrls: ['./user-card.component.scss']
 })
 export class UserCardComponent implements OnInit {
 
@@ -13,6 +13,10 @@ export class UserCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getRouterLink = () : string => {
+    return '/user-form/' + this.user.id
   }
 
 }

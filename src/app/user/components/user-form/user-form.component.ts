@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
@@ -12,16 +12,29 @@ import { UserService } from '../../services/user.service';
 })
 export class UserFormComponent implements OnInit {
 
-  userForm: FormGroup
+  form: FormGroup
+  editMode: boolean = false
+  id: number = 0
 
   constructor(private formBuilder: FormBuilder,
               private userService: UserService,
               private router: Router,
-              private toastr: ToastrService) { 
-    this.userForm = this.buildForm()
+              private toastr: ToastrService,
+              private route: ActivatedRoute) { 
+    this.form = this.buildForm()
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params['id']
+
+    if(this.id){
+      this.editMode = true
+
+      this.userService.getById(this.id).subscribe(user => {
+        this.form.patchValue(user)
+      })
+    }
+  }
 
   buildForm(): FormGroup{
     return this.formBuilder.group({
@@ -33,23 +46,37 @@ export class UserFormComponent implements OnInit {
 
   onSubmit(){
 
-    if(!this.userForm.valid){
+    if(!this.form.valid){
       this.toastr.error("Verifique se todos os campos do formulário foram preenchidos corretamente")
       return
     }
 
     const user: User = {
-      name: this.userForm.value.name,
-      mail: this.userForm.value.mail,
-      profession: this.userForm.value.profession
+      name: this.form.value.name,
+      mail: this.form.value.mail,
+      profession: this.form.value.profession
     }
     
-    this.userService.save(user).subscribe(res => {
-      this.toastr.success("cadastrado com sucesso")
-      this.router.navigate(['/users'])
-    }, error => {
-      this.toastr.error(error.message)
-    })
+    if(this.editMode){
+      
+      this.userService.update(this.id, user).subscribe(res => {
+        this.toastr.success("atualizado com sucesso")
+        this.router.navigate(['/users'])
+      }, error => {
+        this.toastr.error(error.message)
+      })
+
+    }
+    else{
+
+      this.userService.save(user).subscribe(res => {
+        this.toastr.success("cadastrado com sucesso")
+        this.router.navigate(['/users'])
+      }, error => {
+        this.toastr.error(error.message)
+      })
+
+    }
 
   }
 

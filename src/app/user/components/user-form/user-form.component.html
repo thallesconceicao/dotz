@@ -1,4 +1,13 @@
-<form [formGroup]="userForm">
+<div class="row">
+    <div class="col-12 page-title" *ngIf="!editMode">
+        <h1>Novo usuário</h1>
+    </div>
+    <div class="col-12 page-title" *ngIf="editMode">
+        <h1>Editar usuário</h1>
+    </div>
+</div>
+
+<form [formGroup]="form">
     <div class="row">
     
         <div class="col-12 mb-3">
