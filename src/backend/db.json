@@ -24,15 +24,17 @@
       "id": 2
     },
     {
-      "id": 3,
       "name": "Pedro",
-      "mail": "pedro@naoexiste.com"
+      "mail": "pedro@naoexiste.com",
+      "password": "abc123",
+      "profession": "",
+      "id": 3
     },
     {
-      "id": 4,
       "name": "Maria",
       "mail": "maria@naoexiste.com",
-      "profession": "Jornalista"
+      "profession": "Jornalista",
+      "id": 4
     },
     {
       "name": "thalles",

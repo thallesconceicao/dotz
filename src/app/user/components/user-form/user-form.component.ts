@@ -40,6 +40,7 @@ export class UserFormComponent implements OnInit {
     return this.formBuilder.group({
       name: this.formBuilder.control('', Validators.required),
       mail: this.formBuilder.control('', Validators.required),
+      password: this.formBuilder.control('', Validators.required),
       profession: this.formBuilder.control('')
     })
   }
@@ -54,6 +55,7 @@ export class UserFormComponent implements OnInit {
     const user: User = {
       name: this.form.value.name,
       mail: this.form.value.mail,
+      password: this.form.value.password,
       profession: this.form.value.profession
     }
     
