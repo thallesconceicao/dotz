@@ -21,32 +21,68 @@
       "name": "Joana Silva",
       "mail": "joana@testedeemail.com",
       "profession": "Designer de interiores",
-      "id": 2
+      "id": 2,
+      "description": "",
+      "phone": "+55 13 989989898",
+      "country": "Brazil",
+      "state": "RJ",
+      "city": "Rio de Janeiro",
+      "district": "Lapa",
+      "street": "Rua sem nome",
+      "number": "12",
+      "complement": "apto 12"
     },
     {
-      "name": "Pedro",
+      "name": "Pedro Silva",
       "mail": "pedro@naoexiste.com",
       "password": "abc123",
-      "profession": "",
+      "profession": "Programador",
       "id": 3
     },
     {
       "name": "Maria",
       "mail": "maria@naoexiste.com",
       "profession": "Jornalista",
-      "id": 4
+      "id": 4,
+      "description": "",
+      "phone": "+55 13 900089898",
+      "country": "Brazil",
+      "state": "RJ",
+      "city": "Cordeiro",
+      "district": "Maravilha",
+      "street": "Rua 7 de março",
+      "number": "125",
+      "complement": "fundos"
     },
     {
       "name": "thalles",
       "mail": "thallesangelo@gmail.com",
       "profession": "analista de sistemas",
-      "id": 5
+      "id": 5,
+      "description": "",
+      "phone": "+55 13 900000000",
+      "country": "Brazil",
+      "state": "RJ",
+      "city": "Nova Friburgo",
+      "district": "Centro",
+      "street": "Rua sem nome",
+      "number": "5000",
+      "complement": "apto 0005"
     },
     {
       "name": "João Cardoso",
       "mail": "jcardoso@hotnaomail.com",
       "profession": "Biólogo Marinho",
-      "id": 7
+      "id": 7,
+      "description": "",
+      "phone": "+55 13 989981111",
+      "country": "Brazil",
+      "state": "RJ",
+      "city": "Rio de Janeiro",
+      "district": "Lapa",
+      "street": "Rua sem nome",
+      "number": "12",
+      "complement": "apto 20"
     }
   ]
 }

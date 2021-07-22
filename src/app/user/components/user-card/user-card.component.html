@@ -1,9 +1,30 @@
-<a [routerLink]="getRouterLink()">
-    <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-        <div class="card-header">{{user.name}}</div>
-        <div class="card-body">
-            <h5 class="card-title">{{user.mail}}</h5>
-            <p class="card-text">{{user.profession}}</p>
+<div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">{{user.name}}</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="card-title">{{user.mail}}</h5>
+            </div>
+            <div class="col-8">
+                <p class="card-text">{{user.profession}}</p>
+            </div>
+            <div class="col-2 editButton">
+                <a [routerLink]="getRouterLink()">
+                    E
+                </a>
+            </div>
+            <div 
+                class="col-2 openExtraData"
+                (click)="showExtraData = !showExtraData">
+                +
+            </div>
         </div>
     </div>
-</a>
+    <div 
+        *ngIf="showExtraData"
+        class="card-footer">
+        <p class="card-text">
+            {{user.street}}, {{user.number}} {{user.complement}}, {{user.district}}, {{user.city}} -  {{user.state}} - {{user.country}}
+        </p>
+    </div>
+</div>
