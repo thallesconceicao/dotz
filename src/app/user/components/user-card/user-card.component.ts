@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { ModalInfoComponent } from 'src/app/structure/modal-info/modal-info.component';
-import { ModalConfig } from 'src/app/structure/models/ModalConfig';
+import { ModalInfoComponent } from 'src/app/shared/modal-info/modal-info.component';
+import { ModalConfig } from 'src/app/shared/models/ModalConfig';
 import { User } from '../../models/user';
 
 @Component({

@@ -3,20 +3,15 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { ModalInfoComponent } from './modal-info/modal-info.component';
-
-
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    HomeComponent,
-    ModalInfoComponent
+    HomeComponent
   ],
   exports: [
     HeaderComponent,
-    HomeComponent,
-    ModalInfoComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,

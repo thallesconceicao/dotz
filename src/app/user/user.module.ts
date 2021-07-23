@@ -9,7 +9,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { StructureModule } from '../structure/structure.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { StructureModule } from '../structure/structure.module';
     BrowserModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    StructureModule
+    SharedModule
   ],
   providers: [
     UserService
