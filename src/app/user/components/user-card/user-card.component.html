@@ -1,4 +1,4 @@
-<div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+<div class="card text-dark bg-light mb-3">
     <div class="card-header">{{user.name}}</div>
     <div class="card-body">
         <div class="row">
@@ -24,7 +24,7 @@
         *ngIf="showExtraData"
         class="card-footer">
         <p class="card-text">
-            {{user.street}}, {{user.number}} {{user.complement}}, {{user.district}}, {{user.city}} -  {{user.state}} - {{user.country}}
+            {{user.description}}
         </p>
     </div>
 </div>

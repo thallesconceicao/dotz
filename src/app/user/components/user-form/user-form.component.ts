@@ -41,7 +41,8 @@ export class UserFormComponent implements OnInit {
       name: this.formBuilder.control('', Validators.required),
       mail: this.formBuilder.control('', Validators.required),
       password: this.formBuilder.control('', Validators.required),
-      profession: this.formBuilder.control('')
+      profession: this.formBuilder.control(''),
+      description: this.formBuilder.control('')
     })
   }
 
@@ -56,7 +57,8 @@ export class UserFormComponent implements OnInit {
       name: this.form.value.name,
       mail: this.form.value.mail,
       password: this.form.value.password,
-      profession: this.form.value.profession
+      profession: this.form.value.profession,
+      description: this.form.value.description
     }
     
     if(this.editMode){
