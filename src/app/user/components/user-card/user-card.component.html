@@ -40,9 +40,13 @@
                 </p>
             </div>
             <div class="col-2 d-flex align-items-center justify-content-center">
-                <button type="button" class="btn btn-info">Show More</button>
+                <button type="button" class="btn btn-info" (click)="openInfoModal()">Show More</button>
             </div>
         </div>
         
     </div>
 </div>
+
+<app-modal-info #modal [modalConfig]="modalConfig">
+    <p>Are you Sure?</p>
+</app-modal-info>
