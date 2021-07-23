@@ -10,12 +10,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { SharedModule } from '../shared/shared.module';
+import { UserFilterComponent } from './components/user-filter/user-filter.component';
 
 @NgModule({
   declarations: [
     UserCardComponent,
     UserListComponent,
-    UserFormComponent
+    UserFormComponent,
+    UserFilterComponent
   ],
   exports: [
     UserListComponent,

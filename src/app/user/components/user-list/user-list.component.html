@@ -1,4 +1,8 @@
 <div class="row justify-content-center">
+
+    <app-user-filter
+        (filterName)="filterUserName($event)"></app-user-filter>
+
     <div class="col-12 mb-3">
         <a
             type="button"
@@ -7,7 +11,7 @@
     </div>
 
     <div
-        *ngFor="let user of usersList" 
+        *ngFor="let user of filteredUsersList"
         class="col-8">
         <app-user-card
             [user]="user">
