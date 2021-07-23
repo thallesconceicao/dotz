@@ -33,8 +33,16 @@
     <div 
         *ngIf="showExtraData"
         class="card-footer">
-        <p class="card-text">
-            {{user.description}}
-        </p>
+        <div class="row">
+            <div class="col-10">
+                <p class="card-text">
+                    {{user.description}}
+                </p>
+            </div>
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <button type="button" class="btn btn-info">Show More</button>
+            </div>
+        </div>
+        
     </div>
 </div>
